@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/tanya/AndroidStudioProjects/Demo/shared/feature-kmm"
+    name=":feature-kmm"
+    type="LIBRARY"
+    maven="Demo:feature-kmm:"
+    agpVersion="8.0.0"
+    buildFolder="build"
+    bootClassPath="/home/tanya/Android/Sdk/platforms/android-33/android.jar:/home/tanya/Android/Sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

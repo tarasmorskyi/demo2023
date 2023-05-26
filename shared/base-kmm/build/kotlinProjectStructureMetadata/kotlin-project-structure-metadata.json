@@ -1,0 +1,51 @@
+{
+  "projectStructure": {
+    "formatVersion": "0.3.2",
+    "isPublishedAsRoot": "true",
+    "variants": [
+      {
+        "name": "debugApiElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "debugRuntimeElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "releaseApiElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      },
+      {
+        "name": "releaseRuntimeElements",
+        "sourceSet": [
+          "commonMain"
+        ]
+      }
+    ],
+    "sourceSets": [
+      {
+        "name": "commonMain",
+        "dependsOn": [],
+        "moduleDependency": [
+          "org.jetbrains.kotlin:kotlin-stdlib-common",
+          "io.realm.kotlin:library-base",
+          "io.insert-koin:koin-core",
+          "io.ktor:ktor-client-core",
+          "io.ktor:ktor-client-content-negotiation",
+          "io.ktor:ktor-client-logging",
+          "io.ktor:ktor-client-serialization",
+          "io.ktor:ktor-serialization-kotlinx-json",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core",
+          "io.github.aakira:napier"
+        ],
+        "binaryLayout": "klib"
+      }
+    ]
+  }
+}

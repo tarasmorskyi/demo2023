@@ -1,0 +1,73 @@
+plugins {
+    id('com.android.application')
+    id('org.jetbrains.kotlin.android')
+    id('org.jetbrains.kotlin.kapt')
+    id('org.jetbrains.kotlin.plugin.serialization')
+    id('io.realm.kotlin')
+}
+
+android {
+    namespace "taras.morskyi.app"
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        applicationId appConfig.id
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+
+        versionCode 1
+        versionName "1"
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        testInstrumentationRunnerArguments["runnerBuilder"] = "de.mannodermaus.junit5.AndroidJUnit5Builder"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    testOptions.unitTests.all {
+        useJUnitPlatform()
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            multiDexEnabled false
+        }
+        release {
+            debuggable false
+            shrinkResources false
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    lintOptions {
+        htmlReport true
+        abortOnError false
+        warningsAsErrors true
+    }
+
+    kotlinOptions {
+        freeCompilerArgs = freeCompilerArgs + "-Xallow-result-return-type"
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
+}
+
+kapt {
+    useBuildCache = true
+}
+
+// Dependencies - Main
+dependencies {
+    implementation project(':features:feature')
+
+    kapt(libs.glide.compiler)
+}

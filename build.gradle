@@ -1,0 +1,21 @@
+buildscript {
+    apply from: "${rootProject.projectDir}/shared/shared.gradle"
+    with sharedBuildscript
+}
+
+allprojects {
+    with sharedAllprojects
+
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+        kotlinOptions {
+            freeCompilerArgs += '-Xopt-in=kotlin.RequiresOptIn'
+            freeCompilerArgs += '-Xextended-compiler-checks'
+        }
+    }
+}
+
+with initExt
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

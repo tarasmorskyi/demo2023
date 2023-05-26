@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files('shared/gradle/libs.versions.toml'))
+        }
+    }
+}
+include ':app'
+include ':features:base'
+include ':features:feature'
+include ':features:feature-distillers'
+
+apply from:'shared/settings.gradle'

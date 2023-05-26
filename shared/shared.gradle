@@ -1,0 +1,67 @@
+ext.sharedBuildscript = {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        mavenLocal()
+        google()
+        maven { url 'https://repo1.maven.org/' }
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
+        maven { url "https://oss.jfrog.org/artifactory/oss-snapshot-local" }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://www.jetbrains.com/intellij-repository/releases" }
+        maven { url "https://jetbrains.bintray.com/intellij-third-party-dependencies" }
+    }
+
+    dependencies {
+        classpath(libs.classpath.android.plugin)
+        classpath(libs.classpath.kotlin.plugin)
+        classpath(libs.classpath.kotlin.serialization.plugin)
+        classpath(libs.classpath.realm.plugin)
+    }
+}
+
+ext.sharedAllprojects = {
+
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        mavenLocal()
+        google()
+        maven { url 'https://repo1.maven.org/' }
+        maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+        maven { url "https://s3.amazonaws.com/repo.commonsware.com" }
+        maven { url "https://maven.lokalise.co" }
+        maven { url "https://jitpack.io" }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url = uri("https://dl.bintray.com/kotlin/kotlin-dev") }
+    }
+}
+
+ext.initExt = {
+    ext {
+        versions = [
+                minSdk      : libs.versions.minSdk.get().toInteger(),
+                compileSdk  : libs.versions.compileSdk.get().toInteger(),
+                targetSdk   : libs.versions.targetSdk.get().toInteger(),
+        ]
+
+        appConfig = [
+                id         : 'taras.morskyi.demo',
+                versionCode: 1,
+                versionName: "1",
+                debugSuffix: 'debug'
+        ]
+
+        testDependencies = [
+                libs.kotlinx.coroutines.test,
+                libs.turbine,
+                libs.koin.test,
+                libs.kotlin.test.junit
+        ]
+        testKotlinDependencies = [
+                "test-common",
+                "test-annotations-common"
+        ]
+    }
+}

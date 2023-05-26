@@ -1,0 +1,16 @@
+taras.morskyi.base_kmm.base-kmm-lifecycle-viewmodel-2.5.1-0 /home/tanya/.gradle/caches/transforms-3/42b43c59790ceab1b3fe42c95bbc62ba/transformed/lifecycle-viewmodel-2.5.1/res
+taras.morskyi.base_kmm.base-kmm-lifecycle-livedata-2.5.1-1 /home/tanya/.gradle/caches/transforms-3/6880223bd8281273d5f4977650234e90/transformed/lifecycle-livedata-2.5.1/res
+taras.morskyi.base_kmm.base-kmm-jetified-startup-runtime-1.1.1-2 /home/tanya/.gradle/caches/transforms-3/8a48ebb915927195db4ef085dc5cb696/transformed/jetified-startup-runtime-1.1.1/res
+taras.morskyi.base_kmm.base-kmm-jetified-lifecycle-livedata-core-ktx-2.5.1-3 /home/tanya/.gradle/caches/transforms-3/8b18985017625b3222289b63bcc68d95/transformed/jetified-lifecycle-livedata-core-ktx-2.5.1/res
+taras.morskyi.base_kmm.base-kmm-lifecycle-livedata-core-2.5.1-4 /home/tanya/.gradle/caches/transforms-3/9fb0e8379330693119a93acde61a5790/transformed/lifecycle-livedata-core-2.5.1/res
+taras.morskyi.base_kmm.base-kmm-jetified-lifecycle-viewmodel-ktx-2.5.1-5 /home/tanya/.gradle/caches/transforms-3/b92629a8d15562e22682ba6120160fc4/transformed/jetified-lifecycle-viewmodel-ktx-2.5.1/res
+taras.morskyi.base_kmm.base-kmm-jetified-lifecycle-livedata-ktx-2.5.1-6 /home/tanya/.gradle/caches/transforms-3/d3796fe1d36d5cce76cc592431cef9b4/transformed/jetified-lifecycle-livedata-ktx-2.5.1/res
+taras.morskyi.base_kmm.base-kmm-pngs-7 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/build/generated/res/pngs/release
+taras.morskyi.base_kmm.base-kmm-resValues-8 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/build/generated/res/resValues/release
+taras.morskyi.base_kmm.base-kmm-mergeReleaseResources-9 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+taras.morskyi.base_kmm.base-kmm-mergeReleaseResources-10 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+taras.morskyi.base_kmm.base-kmm-merged_res-11 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/build/intermediates/merged_res/release
+taras.morskyi.base_kmm.base-kmm-androidMain-12 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/src/androidMain/res
+taras.morskyi.base_kmm.base-kmm-androidRelease-13 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/src/androidRelease/res
+taras.morskyi.base_kmm.base-kmm-main-14 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/src/main/res
+taras.morskyi.base_kmm.base-kmm-release-15 /home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/src/release/res
