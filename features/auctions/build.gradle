@@ -1,0 +1,31 @@
+plugins {
+    id('com.android.library')
+    id('org.jetbrains.kotlin.android')
+    id('org.jetbrains.kotlin.kapt')
+}
+
+android {
+    namespace "taras.morskyi.auctions"
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        minSdk versions.minSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    kotlinOptions {
+        freeCompilerArgs = freeCompilerArgs + "-Xallow-result-return-type"
+    }
+}
+
+dependencies {
+    api project(':features:base')
+    api project(':auctions-kmm')
+
+    testApi project(':tests:auctions-kmm')
+}

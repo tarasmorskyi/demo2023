@@ -3,6 +3,6 @@
 3    package="taras.morskyi.base_kmm" >
 4
 5    <uses-sdk android:minSdkVersion="26" />
-5-->/home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1781229540562832011.xml
+5-->/home/tanya/AndroidStudioProjects/Demo/shared/base-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest16385099755734677903.xml
 6
 7</manifest>

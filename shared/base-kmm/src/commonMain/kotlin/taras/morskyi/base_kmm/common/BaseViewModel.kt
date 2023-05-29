@@ -27,6 +27,7 @@ abstract class BaseViewModel() : KotlinViewModel() {
                 onComplete()
             }.onFailure {
                 val error = errorCall(it) ?: return@onFailure
+                error.printStackTrace()
                 if (!silent && error !is CancellationException) errors.value = Mailbox(error)
             }
         }
@@ -44,6 +45,7 @@ abstract class BaseViewModel() : KotlinViewModel() {
                 onComplete()
             }.onFailure {
                 val error = errorCall(it) ?: return@onFailure
+                error.printStackTrace()
                 if (!silent && error !is CancellationException) errors.value = Mailbox(error)
             }
             isLoading.value = false

@@ -1,6 +1,13 @@
-include ':feature-kmm'
-project(':feature-kmm').projectDir = file('feature-kmm')
-include ':feature-distillers-kmm'
-project(':feature-distillers-kmm').projectDir = file('feature-distillers-kmm')
+include ':auctions-kmm'
+project(':auctions-kmm').projectDir = file('auctions-kmm')
+include ':distillers-kmm'
+project(':distillers-kmm').projectDir = file('distillers-kmm')
 include ':base-kmm'
 project(':base-kmm').projectDir = file('base-kmm')
+
+include ':tests:base-kmm'
+project(':tests:base-kmm').projectDir = file('tests/base-kmm')
+include ':tests:auctions-kmm'
+project(':tests:auctions-kmm').projectDir = file('tests/auctions-kmm')
+include ':tests:distillers-kmm'
+project(':tests:distillers-kmm').projectDir = file('tests/distillers-kmm')

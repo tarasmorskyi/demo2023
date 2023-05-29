@@ -20,6 +20,16 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            debuggable false
+        }
+    }
+
     buildFeatures {
         viewBinding true
     }
@@ -38,7 +48,7 @@ kapt {
 }
 
 dependencies {
-    api(project(':feature-kmm'))
+    api(project(':base-kmm'))
 
     api(libs.kotlinx.coroutines.android)
 

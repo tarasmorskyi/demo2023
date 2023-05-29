@@ -1,10 +1,8 @@
 package taras.morskyi.base_kmm.common
 
-import io.github.aakira.napier.Napier
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.plugins.*
-import io.ktor.client.plugins.logging.*
 import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
 import io.ktor.client.statement.*
@@ -21,12 +19,12 @@ class KtorRequestParams(
     val formEncodedFields: Map<String, String?> = emptyMap(),
 )
 
-data class HttpClientConfig(
+data class DemoHttpClientConfig(
     val baseUrl: String,
 )
 
 class DemoHttpClient(
-    val config: HttpClientConfig,
+    val config: DemoHttpClientConfig,
     val client: HttpClient,
 ) {
 

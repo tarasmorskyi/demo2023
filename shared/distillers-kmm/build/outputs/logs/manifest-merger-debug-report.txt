@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml:2:13-83
+INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml:2:13-83
+INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml:2:13-83
+	package
+		INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+		ADDED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml:2:13-83
+		INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+	xmlns:android
+		ADDED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml:2:23-81
+uses-sdk
+INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml reason: use-sdk injection requested
+INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+	android:targetSdkVersion
+		INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+		ADDED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+		INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+	android:minSdkVersion
+		INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+		ADDED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml
+		INJECTED from /home/tanya/AndroidStudioProjects/Demo/shared/distillers-kmm/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest11780881312357920616.xml

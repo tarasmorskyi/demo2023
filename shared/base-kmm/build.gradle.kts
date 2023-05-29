@@ -23,6 +23,7 @@ kotlin {
                 api(libs.ktor.serialization.kotlinx.json)
                 api(libs.kotlinx.coroutines.core)
                 api(libs.napier)
+                api(libs.kotlinx.datetime)
             }
         }
         val androidMain by getting {

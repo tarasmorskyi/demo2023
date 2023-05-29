@@ -5,10 +5,13 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
+import taras.morskyi.auctions.di.auctionsModule
 import taras.morskyi.base.di.baseModule
-import taras.morskyi.feature.di.featureModule
+import taras.morskyi.auctions_kmm.di.auctionsKmmModule
 import taras.morskyi.base_kmm.di.baseKmmModule
-import taras.morskyi.feature_kmm.di.featureKmmModule
+import taras.morskyi.demo.home.homeModule
+import taras.morskyi.distillers.di.distillersModule
+import taras.morskyi.distillers_kmm.di.distillersKmmModule
 
 object DependencyInjection {
 
@@ -18,10 +21,13 @@ object DependencyInjection {
             androidContext(application)
             modules(
                 baseModule,
-                featureModule,
+                homeModule,
+                auctionsModule,
+                distillersModule,
 
                 baseKmmModule,
-                featureKmmModule
+                auctionsKmmModule,
+                distillersKmmModule,
             )
         }
     }

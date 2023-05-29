@@ -13,12 +13,16 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/auctions" />
             <option value="$PROJECT_DIR$/features/base" />
-            <option value="$PROJECT_DIR$/features/feature" />
-            <option value="$PROJECT_DIR$/features/feature-distillers" />
+            <option value="$PROJECT_DIR$/features/distillers" />
+            <option value="$PROJECT_DIR$/shared/auctions-kmm" />
             <option value="$PROJECT_DIR$/shared/base-kmm" />
-            <option value="$PROJECT_DIR$/shared/feature-distillers-kmm" />
-            <option value="$PROJECT_DIR$/shared/feature-kmm" />
+            <option value="$PROJECT_DIR$/shared/distillers-kmm" />
+            <option value="$PROJECT_DIR$/shared/tests/auctions-kmm" />
+            <option value="$PROJECT_DIR$/shared/tests/base-kmm" />
+            <option value="$PROJECT_DIR$/shared/tests/distillers-kmm" />
+            <option value="$PROJECT_DIR$/tests" />
           </set>
         </option>
       </GradleProjectSettings>

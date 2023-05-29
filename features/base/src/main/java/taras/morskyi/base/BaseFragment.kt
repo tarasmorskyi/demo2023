@@ -69,7 +69,15 @@ abstract class BaseFragment<T : Host> : Fragment() {
 
     fun onError(throwable: Throwable?) {
         when (throwable) {
-            is HttpError -> Toast.makeText(activity, "${throwable.statusCode} for ${throwable.url}", Toast.LENGTH_LONG).show()
+            is HttpError -> Toast.makeText(
+                activity,
+                "${throwable.statusCode} for ${throwable.url}",
+                Toast.LENGTH_LONG
+            ).show()
+
+            else -> if (throwable != null) {
+                Toast.makeText(activity, throwable.message.orEmpty(), Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

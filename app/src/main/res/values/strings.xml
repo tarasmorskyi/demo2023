@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Demo</string>
+    <string name="auctions">Auctions</string>
+    <string name="distillers">Distillers</string>
 </resources>

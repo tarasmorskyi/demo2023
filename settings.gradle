@@ -7,7 +7,7 @@ dependencyResolutionManagement {
 }
 include ':app'
 include ':features:base'
-include ':features:feature'
-include ':features:feature-distillers'
+include ':features:auctions'
+include ':features:distillers'
 
 apply from:'shared/settings.gradle'

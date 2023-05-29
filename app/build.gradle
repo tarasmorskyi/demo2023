@@ -67,7 +67,7 @@ kapt {
 
 // Dependencies - Main
 dependencies {
-    implementation project(':features:feature')
-
+    implementation project(':features:auctions')
+    implementation project(':features:distillers')
     kapt(libs.glide.compiler)
 }
