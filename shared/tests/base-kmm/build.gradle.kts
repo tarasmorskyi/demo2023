@@ -6,10 +6,6 @@ plugins {
 
 version = "1.0"
 
-val testDependencies: List<Any> = rootProject.ext.get("testDependencies") as List<Any>
-val testKotlinDependencies: List<String> =
-    rootProject.ext.get("testKotlinDependencies") as List<String>
-
 kotlin {
     android()
 
@@ -17,21 +13,17 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(project(":base-kmm"))
-                testDependencies.forEach {
-                    api(it)
-                }
-                testKotlinDependencies.forEach {
-                    api(kotlin(it))
-                }
+                api(libs.kotlinx.coroutines.test)
+                api(libs.turbine)
+                api(libs.koin.test)
+                api(libs.kotlin.test.junit)
+                api(kotlin("test-common"))
+                api(kotlin("test-annotations-common"))
             }
         }
+        val commonTest by getting
         val androidMain by getting
-        val androidTest by getting {
-            dependencies {
-                implementation(kotlin("test-junit"))
-                implementation(libs.junit4)
-            }
-        }
+        val androidTest by getting
     }
 }
 

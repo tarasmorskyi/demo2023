@@ -5,7 +5,7 @@ import taras.morskyi.distillers_kmm.data.models.domain.Distiller
 import taras.morskyi.distillers_kmm.data.models.domain.DistilleryBid
 
 class DistilleriesApiMock(
-    val getDistillers: () -> List<Distiller> = { emptyList() },
+    val getDistillers: suspend () -> List<Distiller> = { emptyList() },
     val getDistilleryData: suspend (String) -> List<DistilleryBid> = { emptyList() }
 )
 

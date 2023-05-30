@@ -1,5 +1,5 @@
 buildscript {
-    apply from: "${rootProject.projectDir}/shared/shared.gradle"
+    apply from: "${rootProject.projectDir}/shared.gradle"
     with sharedBuildscript
 }
 

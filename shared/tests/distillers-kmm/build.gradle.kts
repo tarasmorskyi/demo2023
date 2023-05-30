@@ -17,7 +17,9 @@ kotlin {
                 api(project(":distillers-kmm"))
             }
         }
+        val commonTest by getting
         val androidMain by getting
+        val androidTest by getting
     }
 }
 

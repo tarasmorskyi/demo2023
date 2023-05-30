@@ -1,50 +1,46 @@
 package taras.morskyi.tests.distillers_kmm.usecases
 
 import app.cash.turbine.test
-import io.github.aakira.napier.Napier
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.LocalDate
-import org.junit.Test
 import org.koin.test.get
-import taras.morskyi.distillers_kmm.data.models.domain.DistilleryBid
+import taras.morskyi.distillers_kmm.data.models.domain.Distiller
 import taras.morskyi.distillers_kmm.usecases.GetDistilleriesLoadingUseCase
 import taras.morskyi.tests.base_kmm.BaseTest
 import taras.morskyi.tests.distillers_kmm.data.DistilleriesApiMock
 import taras.morskyi.tests.distillers_kmm.data.DistilleryDatabaseMock
 import taras.morskyi.tests.distillers_kmm.di.initDistillersDependencyInjection
+import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class GetDistilleriesLoadingUseCaseTest : BaseTest() {
 
     @Test
-    fun `test if distillery bids are fetched and mapped`() = runTest {
+    fun `test if loading status is changed before and after loading distilleries`() = runTest {
 
         val input = listOf(
-            DistilleryBid(
+            Distiller(
                 slug = "test",
                 name = "test",
-                date = LocalDate.fromEpochDays(0),
-                bidMax = 0.0,
-                bidMin = 0.0,
-                bidMean = 0.0,
-                tradingVolume = 0.0,
-                lotsCount = 1,
+                country = "test",
+                whiskies = 1,
+                votes = 1,
+                rating = 1.0
             )
         )
 
-        var await = true
+        val delayedInput = MutableStateFlow<List<Distiller>?>(null)
 
         initDistillersDependencyInjection(
             apiMock = DistilleriesApiMock(
-                getDistilleryData = {
-                    delay(5000)
-                    input
+                getDistillers = {
+                    delayedInput.filterNotNull().first()
                 }
             ),
             databaseMock = DistilleryDatabaseMock()
@@ -52,6 +48,7 @@ class GetDistilleriesLoadingUseCaseTest : BaseTest() {
 
         get<GetDistilleriesLoadingUseCase>().invoke(Unit).test {
             assertTrue(awaitItem())
+            delayedInput.value = input
             assertFalse(awaitItem())
         }
     }

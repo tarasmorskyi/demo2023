@@ -3,7 +3,7 @@ kotlin = "1.7.21"
 realm = "1.9.0"
 
 # Plugins
-androidGradlePlugin = "8.0.0"
+androidGradlePlugin = "7.4.0"
 googleServicesPlugin = "4.3.13"
 
 # Android

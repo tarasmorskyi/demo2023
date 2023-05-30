@@ -1,29 +1,25 @@
 package taras.morskyi.tests.distillers_kmm.usecases
 
 import app.cash.turbine.test
-import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.test.runTest
-import kotlinx.datetime.LocalDate
-import org.junit.Test
 import org.koin.test.get
 import taras.morskyi.distillers_kmm.data.models.domain.Distiller
-import taras.morskyi.distillers_kmm.data.models.domain.DistilleryBid
-import taras.morskyi.distillers_kmm.data.models.entities.DistilleryEntity
-import taras.morskyi.distillers_kmm.data.models.viewdata.DistilleryBidViewData
 import taras.morskyi.distillers_kmm.data.models.viewdata.DistilleryViewData
-import taras.morskyi.distillers_kmm.usecases.FetchDistilleryBidsUseCase
 import taras.morskyi.distillers_kmm.usecases.GetDistilleriesUseCase
 import taras.morskyi.tests.base_kmm.BaseTest
 import taras.morskyi.tests.distillers_kmm.data.DistilleriesApiMock
 import taras.morskyi.tests.distillers_kmm.data.DistilleryDatabaseMock
 import taras.morskyi.tests.distillers_kmm.di.initDistillersDependencyInjection
+import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class GetDistilleriesUseCaseTest : BaseTest() {
 
     @Test
-    fun `test if distillery bids are fetched and mapped`() = runTest {
+    fun `test if distilleries are fetched, stored and returned`() = runTest {
 
         val input = listOf(
             Distiller(
@@ -47,6 +43,8 @@ class GetDistilleriesUseCaseTest : BaseTest() {
             )
         )
 
+        val databaseInsert = MutableStateFlow<List<List<Distiller>>>(emptyList())
+
         initDistillersDependencyInjection(
             apiMock = DistilleriesApiMock(
                 getDistillers = {
@@ -56,9 +54,18 @@ class GetDistilleriesUseCaseTest : BaseTest() {
             databaseMock = DistilleryDatabaseMock(
                 getDistilleries = {
                     flowOf(input)
+                },
+                insertDistilleries = { distillers ->
+                    databaseInsert.update { value ->
+                        value + listOf(distillers)
+                    }
                 }
             )
         )
+
+        databaseInsert.test {
+            assertEquals(listOf(input), awaitItem())
+        }
 
         get<GetDistilleriesUseCase>().invoke(Unit).test {
             assertEquals(expected, awaitItem())

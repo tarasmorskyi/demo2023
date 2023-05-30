@@ -52,16 +52,5 @@ ext.initExt = {
                 versionName: "1",
                 debugSuffix: 'debug'
         ]
-
-        testDependencies = [
-                libs.kotlinx.coroutines.test,
-                libs.turbine,
-                libs.koin.test,
-                libs.kotlin.test.junit
-        ]
-        testKotlinDependencies = [
-                "test-common",
-                "test-annotations-common"
-        ]
     }
 }
