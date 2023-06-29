@@ -8,9 +8,6 @@ import androidx.fragment.app.DialogFragment
 import taras.morskyi.R
 
 
-/**
- * Created by stephan on 10-12-2014.
- */
 class ProgressDialog : DialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,

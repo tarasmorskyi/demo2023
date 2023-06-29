@@ -67,7 +67,7 @@ abstract class BaseFragment<T : Host> : Fragment() {
         }
     }
 
-    fun onError(throwable: Throwable?) {
+    private fun onError(throwable: Throwable?) {
         when (throwable) {
             is HttpError -> Toast.makeText(
                 activity,
